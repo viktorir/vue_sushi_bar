@@ -1,30 +1,42 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <header>
+    <a id="logo" href="/">
+      <img src="@/assets/logobar.logo.png" height="60"/>
+    </a>
+    <a id="signin" href="/">Войти</a>
+  </header>
+  <main></main>
+  <footer></footer>
 </template>
 
+<script>
+export default {
+
+}
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+body {
+  margin: 0;
 }
 
-nav {
-  padding: 30px;
+header {
+  height: 80px;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+  padding: 10px 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#signin {
+  text-decoration: none;
+
+  color: red;
+  font-size: 36px;
+  font-family: sans-serif;
 }
 </style>
